@@ -1,26 +1,101 @@
 <html>
 
 <head>
-    <title>
-        Login Form
-    </title>
+    <title>Recent Calls</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.19.3/apexcharts.min.js"></script>
+<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" > </script> 
+
 </head>
 
-<body class="login">
-    <div class="loginbox">
-        <img src="css/avatar.png" class="avatar">
-        <h1>Login Here</h1>
-        <form>
-            <p>Username</p>
-            <input type="text" name="" placeholder="Enter Username">
-            <p>Password</p>
-            <input type="password" name="" placeholder="Enter Password">
-            <input id="login" type="submit" name="" value="Login">
-            <input id="sup" type="submit" name="" value="Create an account here">
-            <a href="#">Lost your password?</a><br>
-        </form>
+<body class="mainPg">
+  
+    
+    <div id="Clog">
+        <h1>
+            Call Log
+        </h1>
+        <h5>
+            Below contains your recent calls as well as the contacts you are automatically scheduled to call.
+        </h5>
+
+          <img src = "css/blueColor-2.png" style = "position:absolute;z-index:-3;float:left;margin-right:100%;width:30%;">
+          <img src = "css/blueColor-2.png" style = "position:absolute;z-index:-2;float:top;margin-left:70%;width:30%;margin-top:-20%;-webkit-transform: scaleX(-1);transform: scaleX(-1);">
+          <img src = "css/callingPink.svg" style = "position:absolute;z-index:-2;float:top;margin-left:80%;width:20%;margin-top:-15%">
+          <div style = "font-family: 'Roboto', sans-serif;">
+          <p id="showData"></p>
+          <p id="showData2"></p>
+          <script src=jsontable.js></script>  
+          </div>
+          <div style = "font-family: 'Roboto', sans-serif;font-size:40px">
+          
+
+
+           <h1 class="CallDashboardTitle">Call Dashboard</h1>
+        <div id="chart" class="chart"></div>
+        <script>
+                var options = {
+        series: [{
+            name: 'Answered',
+            data: [10,32,30,45]
+        }, {
+            name: 'Sent to Voicemail',
+            data: [80,56,23,19]
+        }, {
+            name: 'Disconnected',
+            data: [5,12,15,18]
+            
+        }],
+        chart: {
+            type: 'bar',
+            height: 350
+        },
+        plotOptions: {
+            bar: {
+                horizontal: false,
+                columnWidth: '50%',
+                endingShape: 'rounded'
+            },
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            show: true,
+            width: 2,
+            colors: ['transparent']
+        },
+        xaxis: {
+            categories: ['7/10','7/11', '7/12','7/13']
+        },
+        yaxis: {
+            title: {
+                text: '% of Results'
+            }
+        },
+        fill: {
+            opacity: 1
+        },
+        tooltip: {
+            y: {
+                formatter: function (val) {
+                    return val + "%"
+                }
+            }
+        }
+    };
+    var chart = new ApexCharts(document.querySelector('#chart'),options);
+    chart.render();
+
+    </script>
     </div>
+   
+
+  <img src = "css/callingPink2.svg" style = "width:30%;z-index:-999;position:absolute;margin-top:-25%;margin-left:5%">
+
+
 </body>
 
 </html>
