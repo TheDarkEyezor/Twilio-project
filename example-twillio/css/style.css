@@ -1,0 +1,68 @@
+
+.mainPg h1 {
+    font-family: 'Vidaloka', serif;
+    text-align: left;
+    color:navy;
+    margin-left:5%;
+    margin-top:3%;
+    font-size: 4.5vw;
+    margin-bottom:-10px;
+}
+
+#home {
+    margin-top: 20px;
+}
+
+table,td,th {
+    border:solid 1px;
+    border-collapse:collapse;
+   }
+
+td{background-color: #f2f2f2;}
+th{background-color:gray;}
+td:hover {background-color: #ddd;}
+
+table {
+  width: 90%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+th {
+  height: 50px;
+  text-align: left;
+}
+
+td {
+  height: 35px;
+}
+
+h5{
+  font-family: 'Roboto', sans-serif;
+  margin-left:5%;
+  font-size: 2vw;
+  margin-right:20%;
+}
+
+.callButton {
+  border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 20px;
+    
+}
+
+.chart {
+    width: 60%;
+    height: 30px;
+    margin: -10px;
+    margin-left:auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.GoogleForm {
+  text-align:center;
+}
